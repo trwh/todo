@@ -2,7 +2,8 @@
 ## Rebuild Lenovo
 1. Assess size of existing Windows build and program files.
 1. Use [this application](http://www.nirsoft.net/utils/produkey-x64.zip) to retrieve the Windows product key from the registry, as per the instructions on [this page](http://www.howtogeek.com/206329/how-to-find-your-lost-windows-or-office-product-keys/)
-1. Attempt to download Windows install media using that key [here](http://www.microsoft.com/en-us/software-recovery).
+1. FAILED: Attempt to download Windows install media using that key [here](http://www.microsoft.com/en-us/software-recovery). Get "`Refer to Message Code 715-123130`" error.
+1. Use [this tool](http://wudt.codeplex.com/) to turn an ISO ripped from my own purchased Windows 7 Pro OEM install DVD to a bootable USB drive.
 1. (If the above fails, consider [resizing the existing partition](http://www.bleepingcomputer.com/tutorials/shrink-and-extend-ntfs-volumes-in-windows/) and creating a new D: as per below. You might also want to create recovery media from the existing D:, although you can order media in the post. [Ugh!]).
 1. Install Windows, wiping all partitions and allocating 80GB to C: `System` and the rest to D: `Data`. Both NTFS.
 1. Make sure TRIM is enabled for the SSD, run `fsutil behavior query DisableDeleteNotify`. See [here](http://lifehacker.com/5640971/check-if-trim-is-enabled-for-your-solid-state-drive-in-windows-7) for more details.
